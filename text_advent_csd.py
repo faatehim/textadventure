@@ -1,156 +1,158 @@
-import time #Imports a module to add a pause
+import time # importing module to add a pause
 
-#Figuring out how users might respond
+#Figuring out how the users might respond
 answer_A = ["A", "a"]
 answer_B = ["B", "b"]
 answer_C = ["C", "c"]
-yes = ["Y", "y", "yes"]
-no = ["N", "n", "no"]
+yes = ["Y", "y", "yes", "Yes", "YES", "yES", "YEs", "YeS"]
+no = ["N", "n", "no", "No", "NO"]
 
-#Grabbing objects
-key = 0
-flashlight = 0
-
-required = ("\nYou can only choose option A, B, or C\n") #Cutting down on duplication
+required = ("\nYou can only choose option A, B, or C\n") # Cutting down on duplication
 required2 = ("\nYou can only choose option A or B\n")
 
-print("""Welcome to the town of Hillers Hollow. Life can be
-a bit strange here; many of us have come to accept our town's
-'eccentricities' without a second thought...what will you
-think?\n\n""")
+print("""Welcome to the home of Usayd Ahmed Sheikh. Thank you for visiting. You won't regret it.\n\n""")
 
 
-#The story is broken into sections, starting with "intro"
-#When you see def name() it means you are defining a function which you will later call
+
 def intro():
-    choice = input("Would you like to find out more about the dark past of Hillers Hollow?\n >>> ")
+    choice = input("Would you like to explore Usayd's home?\n >>> ")
     time.sleep(1) #this just means you are including a pause
     print("\n")
     if choice in yes: #see arrays above
-        print("Perhaps a visit to the Hillers Hollow Historical Society is in order.\n")
+        print("Let's go\n")
     elif choice in no:
-        print ("\nGo on living with your head under a rock. "
-        "\n\nBut don't come crying to me when darkness finds you.")
+        print ("\n Your loss.")
         raise SystemExit #This will exit the program and bring you back to command line
 
 def learn_more():
-  print ("""The preservationist at the historical society tells you
-they take appointments for those researching the town's history
-and artifacts. Do you: """)
+  print ("""You have entered Usayd's home. Would you like to... """)
   time.sleep(1)
   choice2 = input("""
-    A. Make an appointment
-    B. Cut your losses and move on
-    C. Decide this isn't worth your time\n
+    Would you like to?
+    
+    A. Go up the stairs
+    B. Go into the living room \n
     >>> """)
   print("\n")
   if choice2 in answer_A:
-        print("We will see you tomorrow at noon.")
+        choice2aa = input("\nYou see a room with an image of a McDonnell Douglas F-15 Eagle opposing it. That must be Usayd's room. Do you go in? \n >>> ")
+        if choice2aa in yes:
+            time.sleep(1)
+            choice2ab = input("\nYou immediately see desk with a computer open with a big file called homework. There is no way that actually contains homework. Do you open it? \n >>> ")
+            if choice2ab in yes:
+                print("Wow. It actually contains homework. The good stuff must be else where.")
+                time.sleep(4)
+                print("You look around his room and notice that there is a small table full of various medicines, dressings, and bandages. Is Usayd fine? You are getting quite concerned. Anyway you keep wandering around.")
+                time.sleep(6)
+                choice2ac = input("You decide to open his closet and are astonished. You see MO ZAIDI!!??? He is handcuffed and bond to the wall with his mouth sealed with duck tape. He is squealing for help. Do you help him? \n >>>  ")
+                time.sleep(1)
+                if choice2ac in yes:
+                    time.sleep(1)
+                    print("You gotta look for a key to free Mo so you can get him out of there \n")
+                    time.sleep(2)
+                    print("You check under his bed. Nothing except a bunch of magazines.\n")
+                    time.sleep(2)
+                    print("You check in his desk compartments. Nothing except for a bunch of bad math grades. He must be hiding them from his parents.\n")
+                    time.sleep(2)
+                    print("You open his bottle of Tylenol and look in there. There it is!\n")
+                    time.sleep(2)
+                    print("You unlock the handcuffs and Mo comes out. His mouth is still sealed. You gotta run away.\n")
+                    time.sleep(2)
+                    print("But at the last second, you hear Usayd coming upstairs. What do you do?\n")
+                    time.sleep(1)
+                    choice2ad = input("""
+                    A. Confront Usayd
+                    B. Try to hide
+                    C. Try to jump out the window
+                    \n >>>  """)
+                    if choice2ad in answer_A:
+                        time.sleep(1)
+                        print(" 'Yo Usayd. What's up with this?' \n")
+                        time.sleep(1)
+                        print("Usayd pulls out his airsoft gun and shoots you in the head. You have died\n")
+                        raise SystemExit
+                    if choice2ad in answer_B:
+                        time.sleep(1)
+                        print("You hide with Mo in the closet and stay dead silent\n")
+                        time.sleep(1)
+                        print("You see through the small peephole that Usayd has walked by the room.\n")
+                        time.sleep(1)
+                        print("You and Mo run as fast as you can down the stairs and out the house. Congratulations!")
+                        raise SystemExit
+                    if choice2ad in answer_C:
+                        time.sleep(1)
+                        print("You open the door and jump out. Unfortunetly, it is quite a height. You both die immediately on impact.")
+                        raise SystemExit
+        if choice2aa in no:
+            learn_more()
   elif choice2 in answer_B:
-        print("The town libary might have some clues...\n")
-        raise SystemExit
-  elif choice2 in answer_C:
-        print ("\nGo on living with your head under a rock. "
-        "\n\nBut don't come crying to me when darkness finds you.\n")
-        raise SystemExit
+        print("You see 13 boxes of various assortments of cereal brands\n")
+        time.sleep(1)
+        print("Does this kid only eat cereal?\n")
+        time.sleep(0.5)
+        print("Looking ahead, you see Usayd's two sisters busy watching a 10 hour compilation of Peppa Pig on their TV?\n")
+        time.sleep(3)
+        print("Is this all kids watch these days?\n")
+        time.sleep(0.5) 
+        choice2ba = input("Do you take the remote and turn it off? \n >>> ")
+        if choice2ba in yes:
+            time.sleep(0.5)
+            print("You turn off the TV. The two look at you and start crying. Usayd's dad and mom - Rizwan and Ayesha run into the room. You are busted.")
+            raise SystemExit
+        if choice2ba in no:
+            time.sleep(0.5)
+            choice2bb = input("You sneak past them. You look outside and see Usayd on top of his playground pointing an airsoft gun at a can on top of his fence. Do you say something? \n >>> ")
+            if choice2bb in yes:
+                time.sleep(1)
+                print("Usayd has seen you. He point his airsoft at you and shoots. You are dead.")
+                raise SystemExit
+            if choice2bb in no:
+                time.sleep(0.5)
+                choice2bc = input("You keep going and open a closet. And you see JAY KATYAN???????? He is handcuffed to the wall with his mouth sealed. He is squealing for help. Do you help him?")
+                if choice2bc in yes:
+                        time.sleep(0.5)
+                        print("You gotta look for a key to free Jay so you can get him out of there\n")
+                        time.sleep(2)
+                        print("You check in the bathroom. Nothing.\n")
+                        time.sleep(1)
+                        print("You check in the closet hanger. Still nothing.\n")
+                        time.sleep(1)
+                        print("You check in Usayd's trenchcoat. You found it!\n")
+                        time.sleep (1)
+                        print("You unlock the handcuffs and Jay comes out. His mouth is still sealed. You gotta run away.\n")
+                        time.sleep(3)
+                        print("But at the last second, you hear Usayd coming downstairs. What do you do?\n")
+                        time.sleep(1)
+                        choice2bd = input("""
+                        A. Confront Usayd
+                        B. Try to hide
+                        C. Run out the door.
+                        \n >>> """)
+                        if choice2bd in answer_A:
+                            time.sleep(0.5)
+                            print(" 'Yo Usayd. What's up with this?' \n")
+                            time.sleep(1)
+                            print("Usayd pulls out his airsoft gun and shoots you in the head. You have died")
+                            time.sleep(2)
+                            raise SystemExit
+                        if choice2bd in answer_B:
+                            time.sleep(1)
+                            print("You hide with Jay in the closet and stay dead silent\n")
+                            time.sleep(1)
+                            print("You see through the small peephole that Usayd has turned on his PS4. \n")
+                            time.sleep(3)
+                            print("You and Jay run as fast as you can down the stairs and out the house. Congratulations!")
+                            time.sleep(3)
+                            raise SystemExit
+                        if choice2bd in answer_C:
+                            print("You open the door and run out. Congratulations!")
+                            raise SystemExit
+        
   else:
         print(required)
         time.sleep(0.5)
         learn_more()
-    #option_rock()
 
-def appointment():
-    print("""  \nThe next day, the head archivist greets you: Thank you for coming to visit us at
-the Historical Society again today. What is it you are researching?""")
-    time.sleep(1)
-    choice3 = input("""
-    A. Mysterious disappearences of town residents from the 1980s
-    B. The mill fire of 1973
-    C. Extraterrestrial life-forms spotted in Hillers Hollow in the past decade\n
-    >>> """)
-    print("\n")
-    if choice3 in answer_A:
-          print("The archivist says to you: You're delusional and wasting our time.\n")
-          time.sleep(0.5)
-          print("""Feeling somewhat offended, you gather your things and start heading towards
-the door, weaving your way through shelves and cases of town artifacts.\n""")
-          key()
-    elif choice3 in answer_B:
-          print("""An unfortunate accident that left many jobless, and some homeless.
-Nothing left to be said.\n""")
-          raise SystemExit
-    elif choice3 in answer_C:
-          print("You're delusional and wasting our time.\n")
-          time.sleep(1)
-          terrestrial()
-          raise SystemExit
-    else:
-          print(required)
-          time.sleep(1)
-          appointment()
-
-def key():
-    print("Pssssst...\n")
-    time.sleep(0.75)
-    print("As you are leaving, you hear someone whispering to get your attention.\n")
-    time.sleep(0.75)
-    print("""You turn around and find a mousy looking woman with oversized spectacles
-staring back at you.\n""")
-    time.sleep(0.75)
-    print("What is it?, you ask.\n")
-    time.sleep(0.75)
-    print("""The woman tells you that you're not delusional and quickly presses
-a tarnished key into your hand, before scurrying away
-at the sound of approaching footsteps.\n""")
-    choice4 = input("""Do you leave the key at the historical society, or do you put it in your pocket?\n
-    A. Leave the key; this is more annoying than it's worth
-    B. Quickly put the key in your pocket, and prepare to face
-    the approaching footsteps\n
-    >>> """)
-    print("\n")
-    if choice4 in answer_A:
-        print("You're pretty lazy. Are you sure you have what it takes to live in this town?\n")
-        raise SystemExit
-    elif choice4 in answer_B:
-        print("Smart move, that key is going to become very important.\n")
-    else:
-          print(required2)
-          key()
-
-def coffeeshop():
-    print("""Those approaching footsteps were from the stern archivist you had
-your appointment with. She rudely reminded you that you were no longer
-welcome at the historical society. After giving her a snarky reply, you
-made your way to a nearby coffee shop where you are sitting now, comtemplating
-what to do next.\n""")
-    time.sleep(0.75)
-    print("""As you sip your regrettably weak coffee (what is with this town?),
-you notice an older gentleman staring at you from across the cafe.
-Feeling slightly creeped out, you settle up your bill and begin
-gathering your things.\n""")
-    time.sleep(0.75)
-    print("""You begin to make your way towards the door, and the man gets up
-and follows you. This day just keeps getting weirder and weirder.\n""")
-    time.sleep(0.75)
-    print("""Self-consciously, you put your hand in your pocket, as he approaches,
-making sure the key you were given is still there.\n""")
-    time.sleep(0.75)
-    print("""Do I know you?, you ask the strange man.\n""")
-    time.sleep(0.75)
-    print("""No, he says, but I have a message for you: The number etched on that key
-is a clue.\n""")
-
-def keyclue ():
-    print("""The number etched on the key is 13, in what appears to be
-    an old-fashioned font.""")
-
-def terrestrial():
-    print("""Are you really a person who believes in extraterrestrial life
-forms? If so, this is not the adventure for you. This is Hillers Hollow
-after all, not Roswell, New Mexico. Just saying.\n""")
-
-#This is where you call all the functions so they run
 intro()
 learn_more()
-appointment()
-coffeeshop()
+
